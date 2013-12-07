@@ -21,6 +21,10 @@
 		1B84D3881852CDCC00939782 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B84D36A1852CDCB00939782 /* UIKit.framework */; };
 		1B84D3901852CDCC00939782 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B84D38E1852CDCC00939782 /* InfoPlist.strings */; };
 		1B84D3921852CDCC00939782 /* SqliteDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B84D3911852CDCC00939782 /* SqliteDemoTests.m */; };
+		1B84D3A01852CE0E00939782 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B84D39D1852CE0E00939782 /* NSArray+Log.m */; };
+		1B84D3A51852CE5D00939782 /* ZYQPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B84D3A41852CE5D00939782 /* ZYQPerson.m */; };
+		1B84D3A81852DECA00939782 /* ZYQPersonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B84D3A71852DECA00939782 /* ZYQPersonManager.m */; };
+		1B84D3AA1852DFD400939782 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B84D3A91852DFD400939782 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,14 @@
 		1B84D38D1852CDCC00939782 /* SqliteDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SqliteDemoTests-Info.plist"; sourceTree = "<group>"; };
 		1B84D38F1852CDCC00939782 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1B84D3911852CDCC00939782 /* SqliteDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SqliteDemoTests.m; sourceTree = "<group>"; };
+		1B84D39C1852CE0E00939782 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		1B84D39D1852CE0E00939782 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		1B84D39F1852CE0E00939782 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		1B84D3A31852CE5D00939782 /* ZYQPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYQPerson.h; sourceTree = "<group>"; };
+		1B84D3A41852CE5D00939782 /* ZYQPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYQPerson.m; sourceTree = "<group>"; };
+		1B84D3A61852DECA00939782 /* ZYQPersonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYQPersonManager.h; sourceTree = "<group>"; };
+		1B84D3A71852DECA00939782 /* ZYQPersonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYQPersonManager.m; sourceTree = "<group>"; };
+		1B84D3A91852DFD400939782 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B84D3AA1852DFD400939782 /* libsqlite3.dylib in Frameworks */,
 				1B84D3691852CDCB00939782 /* CoreGraphics.framework in Frameworks */,
 				1B84D36B1852CDCB00939782 /* UIKit.framework in Frameworks */,
 				1B84D3671852CDCB00939782 /* Foundation.framework in Frameworks */,
@@ -101,6 +114,7 @@
 		1B84D3651852CDCB00939782 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1B84D3A91852DFD400939782 /* libsqlite3.dylib */,
 				1B84D3661852CDCB00939782 /* Foundation.framework */,
 				1B84D3681852CDCB00939782 /* CoreGraphics.framework */,
 				1B84D36A1852CDCB00939782 /* UIKit.framework */,
@@ -112,6 +126,10 @@
 		1B84D36C1852CDCB00939782 /* SqliteDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1B84D3A11852CE4F00939782 /* Model */,
+				1B84D3A21852CE4F00939782 /* Services */,
+				1B84D39B1852CE0E00939782 /* Category */,
+				1B84D39E1852CE0E00939782 /* Tool */,
 				1B84D3751852CDCB00939782 /* ZYQAppDelegate.h */,
 				1B84D3761852CDCC00939782 /* ZYQAppDelegate.m */,
 				1B84D3781852CDCC00939782 /* Main.storyboard */,
@@ -150,6 +168,41 @@
 				1B84D38E1852CDCC00939782 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1B84D39B1852CE0E00939782 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1B84D39C1852CE0E00939782 /* NSArray+Log.h */,
+				1B84D39D1852CE0E00939782 /* NSArray+Log.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		1B84D39E1852CE0E00939782 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				1B84D39F1852CE0E00939782 /* Singleton.h */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		1B84D3A11852CE4F00939782 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1B84D3A31852CE5D00939782 /* ZYQPerson.h */,
+				1B84D3A41852CE5D00939782 /* ZYQPerson.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1B84D3A21852CE4F00939782 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1B84D3A61852DECA00939782 /* ZYQPersonManager.h */,
+				1B84D3A71852DECA00939782 /* ZYQPersonManager.m */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,8 +304,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B84D3731852CDCB00939782 /* main.m in Sources */,
+				1B84D3A81852DECA00939782 /* ZYQPersonManager.m in Sources */,
+				1B84D3A01852CE0E00939782 /* NSArray+Log.m in Sources */,
 				1B84D3771852CDCC00939782 /* ZYQAppDelegate.m in Sources */,
 				1B84D37D1852CDCC00939782 /* ZYQViewController.m in Sources */,
+				1B84D3A51852CE5D00939782 /* ZYQPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
